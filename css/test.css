@@ -3,6 +3,14 @@
     --mainColor: rgba(214, 46, 51, 0.6);
 }
 
+.main-color{
+    color: var(--mainColor);
+}
+
+.main-bg{
+    background-color: var(--mainColor);
+}
+
 a{
     text-decoration: none;
 }
@@ -51,12 +59,11 @@ header{
 nav{
     position: fixed;
     top: 0;
-    left: -15%;
     z-index: 9999;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.nav-width{
-    width: 15%;
+.bg-nav{
+    background-color: rgba(0, 0, 0, 0.848);
 }
 .list li{
     margin-top: 20px;
@@ -71,11 +78,11 @@ nav{
 }
 .icon{
     position: relative;
+    right: -114%;
     width: fit-content;
-    right: -112%;
     cursor: pointer;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 #x-icon{
     cursor: pointer;
@@ -84,6 +91,30 @@ nav{
 
 /* section details */
 
+#details h2{
+    font-family: 'Oleo Script', cursive;
+    position: relative;
+}
+#details h2::before{
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3.5px;
+    background-color: var(--mainColor);
+}
+#details h2::after{
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3.5px;
+    background-color: var(--mainColor);
+}
 .cont-singers{
     width: 60%;
 }
@@ -112,8 +143,163 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
 }
-/* #duration .caption{
-    background-color: var(--mainColor);
+#duration h2{
+    position: relative;
+}
+#duration h2::before{
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3.5px;
+    background-color: #fff;
+}
+#duration h2::after{
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3.5px;
+    background-color: #fff;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px #fff solid;
+    padding: 3rem;
+}
+.box h3 {
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+    .box{
+        width: 75%;
+        margin: auto;
+    }
+}
+
+/* section contact */
+
+#contact h2{
     font-family: 'Oleo Script', cursive;
-    letter-spacing: 0.125rem;
-} */
+    position: relative;
+}
+#contact h2::before{
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3.5px;
+    background-color: var(--mainColor);
+}
+#contact h2::after{
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3.5px;
+    background-color: var(--mainColor);
+}
+#contact .info h6{
+    margin-bottom: 3px;
+}
+#contact .info a{
+    transition: all 0.25s;
+}
+#contact .info a:hover{
+    color: var(--mainColor) !important;
+}
+textarea{
+    resize: none;
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--mainColor) !important;
+}
+.count{
+    padding: 0.5rem;
+    font-size: 18px;
+}
+.zero{
+    font-weight: bold;
+    color: red;
+}
+
+@media screen and (max-width: 992px){
+    #contact .col-lg-6{
+        width: 75%;
+        margin: auto;
+    }
+}
+#alertSend{
+    display: none;
+}
+#alertName{
+    display: none;
+}
+#alertEmail{
+    display: none;
+}
+#alertMessage{
+    display: none;
+}
+
+/* ...Footer... */
+.copy-right a{
+    transition: all 0.25s;
+    text-decoration: none;
+}
+.copy-right a:hover{
+    color: var(--mainColor);
+}
+.links a i{
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+/* social icons.. */
+.fa-facebook-f:hover{
+    background-color: #1877f2;
+}
+.fa-instagram:hover{
+    background-color: #e1306c;
+}
+.fa-twitter:hover{
+    background-color: #1da1f2;
+}
+.fa-linkedin-in:hover{
+    background-color: #0077b5;
+}
+.fa-github:hover{
+    background-color: #6e5494;
+}
+
+/* ...responsive footer... */
+@media screen and (max-width:992px){
+    .cont-footer{
+        padding-top: 1.5rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    .copy-right{
+        width: 75% !important;
+        margin: auto !important;
+    }
+    .footer .links{
+        margin: 0.125rem auto !important;
+    }
+}
+

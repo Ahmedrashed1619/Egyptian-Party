@@ -23,10 +23,10 @@
       </div>
 
       <!-- Navbar -->
-      <nav class="bg-danger nav-width vh-100 p-4 bg-dark">
+      <nav class="vh-100 p-4 bg-nav">
          <div class="cont-nav d-flex flex-column text-white text-end">
             <i id="x-icon" class="fa-solid fa-x fs-4"></i>
-            <div class="list text-center mt-3">
+            <div class="list text-center mt-3 px-4">
                <ul class="list-unstyled">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#details">Details</a></li>
@@ -56,8 +56,9 @@
       </header>
 
       <!-- Section Details -->
-      <section id="details" class="py-5">
+      <section id="details" class="py-5 text-center">
          <div class="container">
+            <h2 class="my-2">New Year Party</h2>
             <div class="singers-list d-flex justify-content-center align-items-center py-5">
                <div class="cont-singers mx-auto text-center">
                   <div class="singer">
@@ -83,41 +84,127 @@
 
       <!-- Section Duration -->
       <section id="duration">
-         <div class="caption py-5">
+         <div class="caption py-5 text-center text-white">
             <div class="container">
-               <div class="row g-3">
-                  <div class="col-md-3 col-lg-6">
+               <h2 class="my-2">Countdown Timer..</h2>
+               <div class="row g-4 py-5">
+                  <div class="col-md-6 col-lg-3">
                      <div class="box">
+                        <h3 class="fs-2">Days</h3>
+                        <h5 class="fs-4" id="days"></h5>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                     <div class="box">
+                        <h3 class="fs-2">Hours</h3>
+                        <h5 class="fs-4" id="hours"></h5>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                     <div class="box">
+                        <h3 class="fs-2">Mins</h3>
+                        <h5 class="fs-4" id="mins"></h5>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                     <div class="box">
+                        <h3 class="fs-2">Seconds</h3>
+                        <h5 class="fs-4" id="secs"></h5>
+                     </div>
+                  </div>
+               </div>
+               <a href="#" class="btn btn-primary px-3 py-2">Ticket Booking</a>
+            </div>
+         </div>
+      </section>
 
+      <!-- Section Contact -->
+      <section id="contact" class="py-5">
+         <div class="container">
+            <h2 class="my-2 text-center">JOIN US</h2>
+            <p class="text-muted text-center my-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <div class="row g-4">
+               <div class="col-lg-6">
+                  <h4 class="fw-bold">CONTACT INFO</h4>
+                  <p class="my-4">Why you should hire me writeup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque nascetur ridiculus mus.</p>
+                  <div class="name d-flex justify-content-between">
+                     <span><i class="fa-solid fa-user-large fs-3 me-4 pe-1 mt-2 main-color"></i></span>
+                     <div class="info me-auto">
+                        <h6 class="fw-bold">Name</h6>
+                        <p class="text-muted">Ahmed Rashed</p>
                      </div>
                   </div>
-                  <div class="col-md-3 col-lg-6">
-                     <div class="box">
-                        
+                  <div class="phone d-flex justify-content-between mb-2">
+                     <span><i class="fa-solid fa-phone fs-3 me-4 pe-2 mt-2 main-color"></i></span>
+                     <div class="info me-auto">
+                        <h6 class="fw-bold">Phone</h6>
+                        <a href="#" target="_blank" class="text-muted text-decoration-none">001-000-000-000</a>
                      </div>
                   </div>
-                  <div class="col-md-3 col-lg-6">
-                     <div class="box">
-                        
+                  <div class="email d-flex justify-content-between mb-2">
+                     <span><i class="fa-solid fa-envelope-circle-check fs-3 me-4 pe-1 mt-2 main-color"></i></span>
+                     <div class="info me-auto">
+                        <h6 class="fw-bold">Email</h6>
+                        <a href="#" target="_blank" class="text-muted text-decoration-none">hello@uigrid.com.</a>
                      </div>
                   </div>
-                  <div class="col-md-3 col-lg-6">
-                     <div class="box">
-                        
+                  <div class="address d-flex justify-content-between my-1">
+                     <span><i class="fa-solid fa-location-dot fs-3 me-4 pe-3 mt-2 main-color"></i></span>
+                     <div class="info me-auto">
+                        <h6 class="fw-bold">Address</h6>
+                        <p class="text-muted">New Street 22545, Nexa Road, New York City, USA.</p>
                      </div>
                   </div>
+               </div>
+               <div class="col-lg-6">
+                  <h4 class="fw-bold mb-4">Message me</h4>
+                  <form class="form-cont" action="#" method="">
+                     <div class="input mb-4">
+                        <input id="name" type="text" name="data[name]" class="form-control" placeholder="Name " required>
+                        <div id="alertName" class="alert alert-danger p-1 text-center mx-auto my-2 ">Should be consisting of a capital letter and 2-15 small letters.</div>
+                     </div>
+                     <div class="input mb-4">
+                        <input id="email" type="email" name="data[email]" class="form-control" placeholder="Email " required>
+                        <div id="alertEmail" class="alert alert-danger p-1 text-center mx-auto my-2">Should be consisting of 3-15 characters and end with (@gmail.com).</div>
+                     </div>
+                     <div class="input mb-2">
+                        <textarea id="message" class="form-control mb-2" name="data[message]" rows="3" maxlength="100" placeholder="Message " required></textarea>
+                        <p class="count">Counter: <span id="counter"></span></p>
+                        <div id="alertMessage" class="alert alert-danger p-1 text-center mx-auto my-2">Must not exceed 100 characters.</div>
+                     </div>
+                     <p id="alertSend" class="fs-6 mb-0 w-50 text-center mx-auto"></p>
+                     <button id="sendMessage" type="submit" class="btn main-bg text-white text-decoration-none px-2 py-2 mt-3 me-2"><i class="fa-solid fa-paper-plane me-3"></i> Send message</button>
+                     <button id="reset" class="btn main-bg text-white py-2 mt-3 ms-2"><i class="fa-solid fa-rotate-left me-2"></i>Reset Form</button>
+                  </form>
                </div>
             </div>
          </div>
       </section>
 
-
-
-
-
-
-
-
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="cont-footer py-5 bg-nav text-white text-center position-relative">
+            <a href="#home" class="position-absolute top-0 end-0 translate-middle text-white"><i class="fa-solid fa-chevron-up fs-3 p-2 main-bg rounded-circle"></i></a>
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6">
+                     <div class="copy-right">
+                        <p>created by <a href="#about" class="main-color">Rashed</a> &copy; Copyright <span class="main-color">2022</span>. All rights are reserved.</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="links text-white w-50 ms-auto d-flex justify-content-evenly align-items-center">
+                        <a target="_blank" href="https://www.facebook.com/ahmed.rashed.10297701"><i class="fa-brands fa-facebook-f p-2 rounded-circle"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/a.rashed1619"><i class="fa-brands fa-instagram p-2 rounded-circle"></i></a>
+                        <a target="_blank" href="https://twitter.com/Rashed166199?s=07"><i class="fa-brands fa-twitter p-2 rounded-circle"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/ahmed-rashed-008b33221"><i class="fa-brands fa-linkedin-in p-2 rounded-circle"></i></a>
+                        <a target="_blank" href="https://github.com/Ahmedrashed1619"><i class="fa-brands fa-github p-2 rounded-circle"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
 
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.6.0.min.js"></script>

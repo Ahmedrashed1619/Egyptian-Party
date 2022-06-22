@@ -106,7 +106,6 @@ let row = setInterval(() => {
 
 
 
-
 // when user press on send message button...
 
 $('#sendMessage').click(function(){
@@ -119,22 +118,19 @@ function sendValidMessage(){
     if(isInputEmpty() != true && validUserName() == true && validUserEmail() == true && validTextMessage() == true)
     {
         $('#alertSend').html('The message was sent Successfully');
-        $('#alertSend').css('display' , 'block');
-        $('#alertSend').css('color' , 'green');
+        $('#alertSend').css({'display':'block' , 'color':'green'});
         resetForm();
     }
     else if (isInputEmpty())
     {
         $('#alertSend').html('all fields are important.. You should fill them correctly');
-        $('#alertSend').css('display' , 'block');
-        $('#alertSend').css('color' , 'red');
+        $('#alertSend').css({'display':'block' , 'color':'red'});
         resetForm();
     }
     else if(validUserName() == false || validUserEmail() == false || validTextMessage() == false)
     {
         $('#alertSend').html('There are Invalid fields.. You should fill them correctly');
-        $('#alertSend').css('display' , 'block');
-        $('#alertSend').css('color' , 'red');
+        $('#alertSend').css({'display':'block' , 'color':'red'});
         resetForm();
     }
 }

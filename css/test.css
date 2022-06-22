@@ -230,10 +230,6 @@ textarea{
     padding: 0.5rem;
     font-size: 18px;
 }
-.zero{
-    font-weight: bold;
-    color: red;
-}
 
 @media screen and (max-width: 992px){
     #contact .col-lg-6{

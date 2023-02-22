@@ -69,7 +69,7 @@ $('.singer h3').click(function(){
 
 // calc countdown timer 
 
-let countdown = new Date('Dec 31 2022 23:59:59').getTime();
+let countdown = new Date('Dec 31 2023 23:59:59').getTime();
 
 let row = setInterval(() => {
 
